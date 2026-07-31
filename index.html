@@ -1,1 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+        content="#0f172a">
+
+    <title>
+
+        Catch My Heart ❤️ | ANM.& Shanica
+
+    </title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="style.css">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+            LOADER
+    =========================== -->
+
+    <div id="loader">
+
+        <!-- Background Blur -->
+
+        <div class="loader-bg"></div>
+
+        <!-- Floating Glow -->
+
+        <div class="loader-glow"></div>
+
+        <div class="loader-box">
+
+            <div class="pixel-heart">
+
+                ❤️
+
+            </div>
+
+            <h2>
+
+                Loading Memories...
+
+            </h2>
+
+            <div class="loading-bar">
+
+                <span></span>
+
+            </div>
+
+            <p id="loadingText">
+
+                Preparing Something Special...
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+        BACKGROUND EFFECT
+    =========================== -->
+
+    <div class="stars"></div>
+
+    <div class="floating-hearts"></div>
+
+    <div class="cursor-glow"></div>
+
+    <div class="noise"></div>
+
+    <!-- ==========================
+            MUSIC
+    =========================== -->
+
+    <audio
+        id="bgMusic"
+        preload="auto"
+        loop>
+
+        <source
+            src="assets/music/apieceofyou.mp3"
+            type="audio/mp3">
+
+    </audio>
+
+    <!-- ==========================
+        WELCOME SECTION
+    =========================== -->
+
+    <section
+        class="welcome active reveal-section"
+        id="welcome">
+
+        <!-- Dark Overlay -->
+
+        <div class="welcome-overlay"></div>
+
+        <!-- Gradient Light -->
+
+        <div class="welcome-light"></div>
+
+        <div class="glass-card hero-card">
+
+            <span class="badge">
+
+                🎮 LOVE GAME
+
+            </span>
+
+            <h1>
+
+                Hi,
+
+                <span>
+
+                    Sayangg ❤️
+
+                </span>
+
+            </h1>
+
+            <h2>
+
+                Happy National Girlfriend Day
+
+            </h2>
+
+            <p>
+
+                Today I prepared something special for you...
+
+                <br><br>
+
+                But before you read everything,
+
+                <br>
+
+                you have to unlock my heart first.
+
+            </p>
+
+            <button id="startGame">
+
+                START GAME
+
+                <i class="fa-solid fa-gamepad"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            GAME SECTION
+    =========================== -->
+
+    <section
+        class="game-section reveal-section"
+        id="gameSection">
+
+        <div class="game-ui">
+
+            <h2>
+
+                Catch My Heart ❤️
+
+            </h2>
+
+            <div class="top-status">
+
+                <div class="score-card">
+
+                    ❤️ Hearts
+
+                    <span id="score">
+
+                        0 / 15
+
+                    </span>
+
+                </div>
+
+                <div class="score-card">
+
+                    ⏰ Time
+
+                    <span id="timer">
+
+                        45
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Progress -->
+
+            <div class="progress-wrapper">
+
+                <div class="progress-bar">
+
+                    <div id="progressFill"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Arena -->
+
+        <div id="gameArea">
+
+            <!-- Semua object dibuat oleh JS -->
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+        SUCCESS SECTION
+=========================== -->
+
+<section class="success-section reveal-section"
+         id="successSection">
+
+    <div class="success-glow"></div>
+
+    <div class="success-card reveal">
+
+        <div class="success-icon">
+            ❤️
+        </div>
+
+        <span class="success-badge">
+
+            MISSION COMPLETE
+
+        </span>
+
+        <h1>
+
+            Congratulations!
+
+        </h1>
+
+        <h2>
+
+            You Unlocked My Heart
+
+        </h2>
+
+        <p>
+
+            You did it, Sayangg.
+
+            <br><br>
+
+            Thank you for catching every
+            little piece of my heart.
+
+            <br><br>
+
+            Now there's only one thing left...
+
+        </p>
+
+        <button id="openLetter">
+
+            Open My Letter
+
+            <i class="fa-solid fa-envelope-open"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        LOVE LETTER
+=========================== -->
+
+<section class="letter-section reveal-section"
+         id="letterSection">
+
+    <div class="letter-light"></div>
+
+    <div class="letter-paper reveal">
+
+        <span class="letter-tag">
+
+            💌 FOR MY FAVORITE GIRL
+
+        </span>
+
+        <h2>
+
+            Happy National Girlfriend Day ❤️
+
+        </h2>
+
+        <div id="typingLetter"
+             class="typing-letter">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        PHOTO GALLERY
+=========================== -->
+
+<section class="gallery-section reveal-section">
+
+    <h2 class="section-title reveal">
+
+        📸 Our Memories
+
+    </h2>
+
+    <div class="gallery-grid smooth-grid">
+
+        <div class="photo-card reveal"><img src="assets/photos/1.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/2.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/3.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/4.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/5.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/6.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/7.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/8.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/9.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/10.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/11.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/12.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/13.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/14.jpg" alt=""></div>
+        <div class="photo-card reveal"><img src="assets/photos/15.jpg" alt=""></div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        REASONS I LOVE YOU
+=========================== -->
+
+<section class="reason-section reveal-section">
+
+    <h2 class="section-title reveal">
+
+        ❤️ Reasons I Love You
+
+    </h2>
+
+    <div class="reason-container">
+
+        <div class="reason-card reveal">Your beautiful smile.</div>
+
+        <div class="reason-card reveal">Your cute little laugh.</div>
+
+        <div class="reason-card reveal">You always make my day better.</div>
+
+        <div class="reason-card reveal">You're my comfort place.</div>
+
+        <div class="reason-card reveal">You understand me.</div>
+
+        <div class="reason-card reveal">You support my dreams.</div>
+
+        <div class="reason-card reveal">Your kindness is endless.</div>
+
+        <div class="reason-card reveal">Every moment with you feels special.</div>
+
+        <div class="reason-card reveal">You're my favorite notification.</div>
+
+        <div class="reason-card reveal">Because you're simply you.</div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        TIMELINE
+=========================== -->
+
+<section class="timeline-section reveal-section">
+
+    <h2 class="section-title reveal">
+
+        🕰 Our Journey
+
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item reveal">
+
+            <span>
+
+                16 July 2026
+
+            </span>
+
+            <h3>
+
+                First Meet ❤️
+
+            </h3>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <span>
+
+                After That
+
+            </span>
+
+            <h3>
+
+                Started Talking Everyday
+
+            </h3>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <span>
+
+                Little by Little
+
+            </span>
+
+            <h3>
+
+                Fell In Love
+
+            </h3>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <span>
+
+                Everyday
+
+            </span>
+
+            <h3>
+
+                Making Beautiful Memories
+
+            </h3>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <span>
+
+                1 August 2026
+
+            </span>
+
+            <h3>
+
+                Happy National Girlfriend Day ❤️
+
+            </h3>
+
+        </div>
+
+    </div>
+
+    </section>
+
+        <!-- ==========================
+            SECRET ACHIEVEMENT
+    =========================== -->
+
+    <section class="secret-section reveal-section">
+
+        <button id="secretBtn"
+                class="secret-btn reveal">
+
+            🎁 Don't Click Me...
+
+        </button>
+
+    </section>
+
+    <!-- ==========================
+        ACHIEVEMENT POPUP
+    =========================== -->
+
+    <div class="achievement-popup"
+         id="achievementPopup">
+
+        <div class="achievement-bg"></div>
+
+        <div class="achievement-card reveal">
+
+            <div class="achievement-icon">
+
+                🏆
+
+            </div>
+
+            <h2>
+
+                Achievement Unlocked ❤️
+
+            </h2>
+
+            <h3>
+
+                Best Girlfriend Ever
+
+            </h3>
+
+            <p>
+
+                Congratulations, Sayangg!
+
+                <br><br>
+
+                You've unlocked the rarest achievement
+                inside ANM's heart.
+
+            </p>
+
+            <button id="closeAchievement">
+
+                Continue
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================
+            ENDING
+    =========================== -->
+
+    <section class="ending-section reveal-section">
+
+        <div class="ending-glow"></div>
+
+        <div class="ending-card reveal">
+
+            <h1>
+
+                Mission Complete ❤️
+
+            </h1>
+
+            <h2>
+
+                Thank You,
+                Sayangg
+
+            </h2>
+
+            <p>
+
+                Happy National Girlfriend Day.
+
+                <br><br>
+
+                Thank you for always staying beside me.
+
+                <br>
+
+                Thank you for making my ordinary days
+                become extraordinary.
+
+                <br><br>
+
+                I hope this little game
+                can always remind you
+                how much I love you.
+
+                <br><br>
+
+                I Lay My Love On You.
+
+            </p>
+
+            <h3>
+
+                — ANM. ❤️
+
+            </h3>
+
+            <button id="replayBtn">
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Replay Game
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+        IMAGE MODAL
+    =========================== -->
+
+    <div class="image-modal"
+         id="imageModal">
+
+        <div class="modal-overlay"></div>
+
+        <span id="closeModal">
+
+            &times;
+
+        </span>
+
+        <img id="modalImage"
+             src=""
+             alt="Preview Image">
+
+    </div>
+
+    <!-- ==========================
+        EFFECT LAYER
+    =========================== -->
+
+    <div id="confetti-container"></div>
+
+    <div id="heart-effects"></div>
+
+    <div id="sparkles"></div>
+
+    <div id="particles"></div>
+
+    <!-- ==========================
+        FOOTER
+    =========================== -->
+
+    <footer class="footer">
+
+        <p>
+
+            Made with ❤️ by ANM.
+
+        </p>
+
+        <span>
+
+            Happy National Girlfriend Day 2026
+
+        </span>
+
+    </footer>
+
+    <!-- ==========================
+        LIBRARIES
+    =========================== -->
+
+    <!-- GSAP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <!-- ScrollTrigger -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+    <!-- Confetti -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <!-- Main Script -->
+
+    <script src="script.js"></script>
+
+</body>
+
+              </html>
